@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--css 샘플코드 : HTML에서의 주석.-->
+<style>
+    ol {
+        color: brown;
+        font-size: 30px;
+    }
+</style>
+<script>
+    // 주석은 각 언어마다 사용법이 다름
+    // ctrl+/누르면 주석 마크 나옴
+    // 클릭시, 경고창 보여주는 함수 만들기
+    // 샘플코드
+    // const btn = document.querySelector('#testBtn');
+    // btn.onclick = function () { alert('Hi') };
+    // 자동 줄맞춤 alt+shift+F
+
+    // const btn = document.getElementById('testBtn');
+    // btn.addEventListener('click', function () {
+    //     alert('hi');
+    // })
+    // 작동은 하지않았다
+
+    // gpt 샘플 코드 예제
+    // 버튼 요소 가져오기
+    var button = document.getElementById("myButton");
+
+    // 버튼 클릭 이벤트에 대한 리스너 등록
+    button.addEventListener("click", function () {
+        // 버튼이 클릭되었을 때 실행되는 코드
+        alert("Button clicked!");
+    });
+</script>
+
+<body>
+    <h1>WEB</h1>
+    <input id="testBtn" type="button" value="클릭">
+    <button id="testBtn2">클릭2</button>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <style>
+        // 버튼 요소 가져오기
+        var button=document.getElementById("myButton");
+
+        // 버튼 클릭 이벤트에 대한 리스너 등록
+        button.addEventListener("click", function() {
+                // 버튼이 클릭되었을 때 실행되는 코드
+                alert("Button clicked!");
+            });
+    </style>
+
+    <p>
+        HTML -> Hypertext Markup Language
+        CSS -> Cascading Style Sheets
+        JavaScript
+    </p>
+</body>
+
+</html>
+
+
+
+echo "# 240213WEB_TEST" >> README.md
+git init
+git add README.md
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Hyoeun01/240213WEB_TEST.git
+git push -u origin main
