@@ -1,0 +1,32 @@
+/* css파일 내에서는 <style>태그 사용금지 */
+
+/* 2.html 에 css 적용여부 확인용
+h1 , a {
+    color: red;
+} */
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin : 0 ;
+   }
+
+ol {
+    border-right : 1px solid gray;
+    /* 블럭이라 화면오른쪽 끝에 실선이생김 */
+    width : 100px ;
+    /* 블럭 크기를 강제로 지정 */
+    margin : 0 ;
+    padding : 20px ;
+    
+}
+
+body {
+    margin : 10px ;
+}
+
+#grid {
+    display: grid ;
+    grid-template-columns: 150px 1fr;
+}

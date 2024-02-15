@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>레드향 주문하기</title>
+  <link rel="stylesheet" href="css/order2.css">
+</head>
+<body>
+  <h1>레드향 주문하기</h1>
+  <div id="container">
+    <!-- form:백엔드 서버에 사용자의 입력값을 전달하는 태그 -->
+    <form>
+      <fieldset>
+        <legend>상품 선택</legend>
+        <p><b>주문할 상품을 선택해 주세요.</b></p>
+        <ul id="product">
+          <li>
+            <!-- value(속성)=s_3(속성값) 폼에서 사용자가 입력하면 체크한값(s_3)을 서버로 전달 -->
+            <!-- '선물용 3kg'는 보여지는 값이고 전달용이 아님 -->
+            <!-- 화면상에 입력된 내용은 해당 input tag name 의 값을 이용해 서버로 전달 
+            서버입장에서 name= s_3_p 의 값을 가져오는 형식 -->
+            <label><input type="checkbox" value="s_3">선물용 3kg</label>
+            <input type="number" name="s_3_p" min="0" max="5">개 <small>(최대 5개)</small>
+          </li>
+          <!-- 같은 타입=number 이기때문에 name을 붙여주면 서버가 구분한다 -->
+          <li>
+            <label><input type="checkbox" value="s_5">선물용 5kg</label>
+            <input type="number" name="s_5_p" min="0" max="3" value="1">개 <small>(최대 3개)</small>
+          </li>
+          
+
+          <li>
+            <label><input type="checkbox" value="f_3">가정용 3kg</label>
+            <input type="number" min="0" max="5">개 <small>(최대 5개)</small>
+          </li>
+          <li>
+            <label><input type="checkbox" value="f_5">가정용 5kg</label>
+            <input type="number" min="0" max="3">개 <small>(최대 3개)</small>
+          </li>
+        </ul>      
+        <p><b>포장 선택</b></p>
+        <ul> 
+          <!-- 라디오 타입은 name="같은이름" 넣어서 그룹으로 묶어주기 -->
+          <!-- name 없으면 두개다 눌러지는 오류 발생 -->
+          <li><label><input type="radio" name="test" value="yes">선물 포장</label></li>
+          <li><label><input type="radio" name="test" value="no">선물 포장 안 함</label></li>
+        </ul>    
+      </fieldset>
+      <fieldset>
+        <legend>배송 정보</legend>
+        <ul id="shipping">
+          <li>
+            <!-- 특정 input의 라벨임을 알리기위해 for="" 를 사용한다.
+            해당 input의 id(=user-name)를 적으면된다 -->
+            <!-- input의 id는 중복 불가능 -->
+            <!-- label을 쓰면 편집이 편해진다 // 안써도 화면상에서는 동일하지만-->
+            <label for="user-name">이름 </label>
+            <input type="text" id="user-name">
+          </li>
+          <li>
+            <label for="addr">배송 주소</label>
+            <input type="text" id="addr">
+          </li>
+          <li>
+            <label for="mail">이메일</label>
+            <input type="email" id="mail">
+          </li>        
+          <li>
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone">
+          </li>
+          <li>
+            <label for="d-day">배송 지정</label>
+            <input type="date" name="order_date" id="d-day"> <small>(주문일로부터 최소 3일 이후)</small>
+          </li>     
+          <li>
+            <label for="memo">메모</label>
+            <textarea id="memo" cols="40" rows="4"></textarea>
+          </li>   
+        </ul>  
+      </fieldset>
+      <div>
+        <button type="submit">주문하기</button>
+        <button type="reset">취소하기</button>
+      </div>        
+    </form>
+  </div>
+</body>
+</html>

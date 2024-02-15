@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상품 소개 페이지</title>
+  <!-- css 작업시 파일을 분리해서 한다 : 유지보수 편하기때문 -->
+
+  <!-- rel=relation // css파일과 연결시키는 코드 -->
+  <!-- 현재 해당 프로젝트에 저장된 파일을 사용하지만, cdn을 이용해서, 인터넷을 통해 다운로드받는다. -->
+
+  <link rel="stylesheet" href="css/poster.css">
+</head>
+<body>
+  <img src="/Do-it-code-sample/04/images/salad.jpg" alt="샐러드">
+  <div id="container">
+    <!-- 상대 경로로 해당 이미지 파일에 접근 시도함
+    현재파일:audio-1.html , 같은 위치에 images 폴더에 바로 접근. -->
+    <img src="images/tangerines.jpg" alt="레드향">
+    <!-- 음원 파일을 불러오는 역할이고, 해당위치를 불러오는 방식을 상대경로로 불러오고있음 -->
+    <!-- 절대경로: C:\Users\it\Documents\WEB\Do-it-code-sample\04\medias\spring.mp3 
+    현재, 라이브 서버가 동작중이어서 루트 디렉토리(=/)가 WEB 이기 때문에 WEB이하의 주소를 작성해야한다-->
+    <!-- controls = 상태 조절바, 막대 - 플레이, 정지 등 -->
+    <audio src="medias/spring.mp3" ></audio>
+
+    <h1>레드향</h1>
+    <p>껍질에 붉은 빛이 돌아 <b>레드향</b>이라 불린다.</p>
+    <p>레드향은 <em>한라봉과 귤을 교배</em>한 것으로<br>일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p>
+    <p>비타민 C와 비타민 P가 풍부해<br> <strong>혈액순환, 감기예방</strong> 등에 좋은 것으로 알려져 있다.</p>
+    <hr>
+    <h2>레드향 샐러드 레시피</h2>
+    <p><b>재료 : </b>레드향 1개, 아보카도 1개, 토마토 1개, 샐러드 채소 30g</p>
+    <p><b>드레싱 : </b>올리브유 1큰술, 레몬즙 2큰술, 꿀 1큰술, 소금 약간</p>
+    <ol>
+      <li>샐러드 채소를 씻고 물기를 제거한 후 준비합니다.</li>
+      <li>레드향과 아보카도, 토마토를 먹기 좋은 크기를 썰어둡니다.</li>
+      <li>드레싱 재료를 믹서에 갈아줍니다.</li>
+      <li>볼에 샐러드 채소와 썰어 둔 레드향, 아보카도, 토마토를 넣고 드레싱을 뿌리면 끝!</li>
+    </ol>
+    <img src="images/salad.jpg" width="320">
+    <hr>
+    <h2>상품 구성</h2>
+    <!-- table:웹문서에 표를 작성할때 사용 -->
+    <table>
+      <!-- caption:제목 -->
+      <caption>선물용과 가정용 상품 구성</caption>
+      <!-- colgroup:행/열을 묶을때 사용 -->
+      <colgroup>
+        <col style="background: color #eee;">
+        <col>
+        <!-- 1열, 2열 특정 2개의 열을 합칠때 사용 -->
+        <col span="2" style="width:150px">
+        <!-- span 속성을 사용해 합치기 전
+          <col style="width:150px">
+          <col style="width:150px">
+        -->
+      </colgroup>
+      <!-- thead : 표의 제목을 의미, 2줄로 표시되고 가운데 정렬이 기본 -->
+      <thead>
+        <!-- tr : 하나의 행을 의미 -->
+        <tr>
+          <!-- td:각 열 의미//th:각 열의 제목 의미.2줄, 자동으로 가운데 정렬 -->
+          <th>용도</th>
+          <th>중량</th>
+          <th>갯수</t>
+          <th>가격</th>
+        </tr>
+      </thead>
+      <!-- 표의 각 컬럼 제외, 실제 본문의 내용 -->
+      <tbody>
+        <tr>
+          <td rowspan="2">선물용</td>
+          <td>3kg</td>
+          <td>11~16과</td>
+          <td>35,000원</td>
+        </tr>
+        <tr>
+          <td>5kg</td>
+          <td>18~26과</td>
+          <td>52,000원</td>
+        </tr>
+        <tr>
+          <!-- 1행과 2행을 하나로 합칠때 -->
+          <td rowspan="2">가정용</td>
+          <td>3kg</td>
+          <td>11~16과</td>
+          <td>30,000원</td>
+        </tr>   
+        <tr>
+          <td>5kg</td>
+          <td>18~26과</td>
+          <td>47,000원</td>
+        </tr>
+      </tbody>        
+    </table>
+  </div>
+</body>
+</html>
