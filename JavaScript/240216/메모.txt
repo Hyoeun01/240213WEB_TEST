@@ -17,3 +17,5 @@
         // . : 닷(dot) 연산자 예)폴더 문서>web>html 의 > 처럼 하위로 연결하는 구분자 라고 생각하면 된다
         // 자바스크립트의 객체에서 특정 폴더에 접근할 때 document.querySelector('body').style.color = 'black'; 로 표시
 
+
+이벤트 핸들러 = 이벤틀 처리하는 처리기
