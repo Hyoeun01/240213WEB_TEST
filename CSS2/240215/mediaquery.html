@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 10px solid green;
+            font-size: 60px;
+        }
+        /* min-width:x px = 가로길이가 x px 이상이면 div태그가 사라지고, 반대인경우 보이게 하기
+        (반대로 할경우 max-width 사용) */
+        @media(max-width: 800px) {
+            div {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- (1)블록인지 인라인인지 확인 불가능 -->
+    <div>Responsive</div>
+</body>
+
+</html>
