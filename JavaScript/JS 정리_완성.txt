@@ -61,24 +61,11 @@ night 버튼을 누르면 <body> 태그가 어떻게 바뀌는지 확인.
         document.querySelector('body').style.backgroundColor = 'black';
         document.querySelector('body').style.color = 'white';
         ">
-      자바스크립트에서 배워야 할게 엄청나게 많다
-        프로그래밍 언어이기때문에 배우는 순서가있다
-        1.변수
-        2.연산자
-        3.조건문, 반복문 (if, for,...)
-        4.클래스
-        5.함수
-        6.내장클래스 (= 내부기능)
-
-      프로그래밍 언어 배우는 순서를 C > C++ > C# > 자바(보수적) > 자바스크립트 > 파이썬(기회되면) 
 
         <input type="button" value="day" onclick="
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('body').style.color = 'black';
         ">
-        객체 : 수납도구 (속성> 변수, 함수 등)
-        . : 닷(dot) 연산자 예)폴더 문서>web>html 의 > 처럼 하위로 연결하는 구분자 라고 생각하면 된다
-        자바스크립트의 객체에서 특정 폴더에 접근할 때 document.querySelector('body').style.color = 'black'; 로 표시
 
 <body> 밑에 복사해서 확인 해보기. 
 
