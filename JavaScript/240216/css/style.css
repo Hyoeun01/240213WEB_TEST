@@ -1,0 +1,66 @@
+/* css파일 내에서는 <style>태그 사용금지 */
+
+/* 2.html 에 css 적용여부 확인용
+h1 , a {
+    color: red;
+} */
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin : 0 ;
+    padding : 20px;
+   }
+
+   /* 문서 전체에 있는 ol태그에 적용이된다 */
+/* ol {
+    border-right : 1px solid gray;
+    /* 블럭이라 화면오른쪽 끝에 실선이생김 */
+    /* width : 100px ;
+    /* 블럭 크기를 강제로 지정 */
+    /* margin : 0 ;
+    padding : 20px ;
+     
+}  */
+
+body {
+    margin : 10px ;
+}
+
+#grid {
+    display: grid ;
+    grid-template-columns: 150px 1fr;
+    /* fr=fragment(x), fraction(부분)
+    첫번째 열은 150px로 고정되고 나머지 열은 반응형으로 남은부분 전부를 차지한다 */
+}
+
+/* id=grid인 요소의 하위 ol태그 전부에 적용하기 */
+#grid ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+    margin-left: 10px;
+}
+
+#article {
+    padding-left: 25px;
+}
+
+@media(max-width :800px){
+    #grid {
+        display: block;
+    }
+    #grid ol {
+        border-right: none;
+    }
+    h1 {
+        border-bottom: none;
+    }
+    h2 {
+        color :blue;
+    }
+
+}
+
