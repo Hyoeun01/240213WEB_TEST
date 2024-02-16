@@ -9,11 +9,34 @@
 
 <body>
 
+    <h1>특정 버튼 이벤트 확인</h1>
+    <!-- onclick 속성을 이용해서 alert 함수 사용. alert는 경고창을 띄우는 역할. 내용은 ()안에 사용하면됨
+    자바스크립트는 문자열을 표기할때 ''or ""를 사용한다 -->
+    <input type="button" value="hi" onclick="alert('hi')">
+
+    <!-- 같은원리로 onclick 기능을 보기 위해서 배경색을 바꾸는 테스트를 했고,
+    위는 alert 함수를 이용했고 아래는 코드를 그대로 작성했다
+    나중에 코드내용을 함수에 담아서 사용하고, 함수의 특정 값에 따라서 동작하게끔 변경할 예정 -->
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+    ">
+
+
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor = 'white';
+    document.querySelector('body').style.color = 'black';
+    ">
+
+    <h1>자바스크립트 : 동적 / HTML : 정적</h1>
     <script>
 
-        document.write('hello world');
-       
+
+        document.write(1 + 1);
+
     </script>
+
+    <h1>1+1</h1>
 </body>
 
 </html>
