@@ -34,23 +34,7 @@
     <br>
     <input type="button" value="로그인" onclick="printInput()">
 
-    <!-- 연습 2 : 간단한 회원가입 폼 만들기 
-    단계 1) 이메일
-        2) 패스워드
-        3) 확인용 패스워드
-        4) 이름
-        5) 전화번호 -->
-
-    <h2>간단한 회원가입 폼</h2>
-
-        e-mail : <input type = "text" id="mail"><br>
-        password : <input type = "password" id="password_"><br>
-        password확인 : <input type = "password" id="password_correct"><br>
-        이름 : <input type = "text" id="name"><br>
-        전화번호 : <input type = "text" id="tel"><br>
-
-        <input type="button" value = "회원가입" onclick = "printSignUp()">
-
+    
 
 
     <!-- text 입력하고 enter 치면 changed 창이 뜹니다 -->
@@ -97,19 +81,6 @@
             alert(userInfo)
         }
         
-
-        function printSignUp() {
-            var mail = document.getElementById('mail').value
-            var password_ = document.getElementById('password_').value
-            var password_correct= document.getElementById('password_correct').value
-            var name = document.getElementById('name').value
-            var tel = document.getElementById('tel').value 
-
-            // 줄바꿔서 출력하려면 어떻게 해야할까요?
-            var SignUp = "Email : "+mail+" password : "+password_+" password확인 : "+password_correct+" 이름 : "+name+" 전화번호 : "+tel
-
-            alert(SignUp)
-        }
 
     </script>
 
