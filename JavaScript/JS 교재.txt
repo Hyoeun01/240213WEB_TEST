@@ -61,12 +61,11 @@ night 버튼을 누르면 <body> 태그가 어떻게 바뀌는지 확인.
         document.querySelector('body').style.backgroundColor = 'black';
         document.querySelector('body').style.color = 'white';
         ">
-
+    
         <input type="button" value="day" onclick="
         document.querySelector('body').style.backgroundColor = 'white';
         document.querySelector('body').style.color = 'black';
         ">
-
 <body> 밑에 복사해서 확인 해보기. 
 
 day 버튼을 누르면 이렇게 변경됨. 
