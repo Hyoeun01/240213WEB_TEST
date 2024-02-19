@@ -1352,6 +1352,7 @@ document.querySelectorAll('a');
 
 모든 <a> 태그를 가져와서 alist 변수에 넣고 출력하기 
 
+// alist >> 배열 이고 typeof(alist) = object : 객체
 var alist = document.querySelectorAll('a');
 console.log(alist[0]);
 console.log(alist[1]);
