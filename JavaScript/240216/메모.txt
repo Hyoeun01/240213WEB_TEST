@@ -42,3 +42,53 @@ abc.png, bcd.mp4 > 파일명은 문자열로 구성
 변수 사용시 유지보수가 편하다.
 
 class : n개 중 x개 선택시 , id
+
+[ div = 블록 / span = 인라인 ]
+
+우선순위 : !연산자 > #id > .class > 선택자
+
+2교시
+        <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';      
+        document.querySelector('body').style.color = 'white';       
+        ">
+
+        //document 객체 하위속성중 querySelector함수에 인자값::body 이용,
+        >> body 태그 선택한 결과와 같다
+
+        들어가보니 style 속성이있고, 들어가니 backgroundColor라는 속성이 있고
+        backgroundColor 에 black 대입
+
+        >>> body 태그의 배경색을 검정으로 바꿨다
+
+
+        <script>
+        function colorchange () {
+                document.querySelector('body').style.backgroundColor = 'black';      
+                document.querySelector('body').style.color = 'white'; 
+        }
+        </script>
+        <input type="button" value="night" onclick="colorchange()">
+
+
+        제목 13 > 절차 지향적인 프로그래밍, 약속 기반. 규칙 기반.
+        시간의 순서대로, 위에서 차례대로 내려오면서 실행된다.
+
+        나머지 내용은 읽어보세요
+
+        14> 조건문
+
+        = : 대입연산자
+        x = 1;
+
+        == : 등위연산자
+        x = 1;
+        x == 2; >> 결과 : false
+
+        === : 일치연산자 (데이터형도 같이 비교하는 연산자)
+        x = 1; //숫자
+        y = "1"; //문자열
+        x === y ; >>결과 : false
+        x == y ; >> 결과 : true
+
+        

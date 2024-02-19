@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>1&lt;2</h3>
+    <script>
+        // document.write : 문서상에 출력하는 기능
+
+        // 자바스크립트로 html 출력하기
+        document.write("<h1>test</h1>")
+        document.write(1 < 2);
+    </script>
+
+    <h3>1&lt;1</h3>
+    <script>
+        document.write(1 < 1);
+    </script>
+
+    <h2>IF-true</h2>
+    <script>
+        document.write("1<br>");
+
+        // true / false 바꿔보기
+        if (false) {
+            document.write("2<br>");
+        } else {
+            document.write("3<br>");
+        }
+        document.write("4<br>");
+    </script>
+
+    <br>
+    
+    <input id="night_day" type="button" value="night" onclick="
+        if(document.querySelector('#night_day').value === 'night') {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color= 'white';
+            document.querySelector('#night_day').value = 'day';   
+        } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color= 'black';
+            document.querySelector('#night_day').value = 'night';   
+        }
+        ">
+
+</body>
+
+</html>
