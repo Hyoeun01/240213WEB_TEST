@@ -37,19 +37,31 @@
     </script>
 
     <br>
-    
+
+    <!-- document.querySelector('#night_day') 가 input id="night_day"를 나타내므로 this로 대체한다 -->
     <input id="night_day" type="button" value="night" onclick="
-        if(document.querySelector('#night_day').value === 'night') {
+        if(this.value === 'night') {
             document.querySelector('body').style.backgroundColor = 'black';
             document.querySelector('body').style.color= 'white';
-            document.querySelector('#night_day').value = 'day';   
+            this.value = 'day';   
         } else {
             document.querySelector('body').style.backgroundColor = 'white';
             document.querySelector('body').style.color= 'black';
-            document.querySelector('#night_day').value = 'night';   
+            this.value = 'night';   
         }
         ">
 
+    <input id="night_day2" type="button" value="night" onclick="
+        if(document.querySelector('#night_day2').value === 'night') {
+            document.querySelector('body').style.backgroundColor = 'black';
+            document.querySelector('body').style.color= 'white';
+            document.querySelector('#night_day2').value = 'day';   
+        } else {
+            document.querySelector('body').style.backgroundColor = 'white';
+            document.querySelector('body').style.color= 'black';
+            document.querySelector('#night_day2').value = 'night';   
+}
+">
 </body>
 
 </html>
