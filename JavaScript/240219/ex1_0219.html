@@ -41,12 +41,18 @@
     <!-- document.querySelector('#night_day') 가 input id="night_day"를 나타내므로 this로 대체한다 -->
     <input id="night_day" type="button" value="night" onclick="
         if(this.value === 'night') {
-            document.querySelector('body').style.backgroundColor = 'black';
-            document.querySelector('body').style.color= 'white';
+
+            var target = document.querySelector('body');
+
+            target.style.backgroundColor = 'black';
+            target.style.color= 'white';
             this.value = 'day';   
         } else {
-            document.querySelector('body').style.backgroundColor = 'white';
-            document.querySelector('body').style.color= 'black';
+
+            var target = document.querySelector('body');
+
+            target.style.backgroundColor = 'white';
+            target.style.color= 'black';
             this.value = 'night';   
         }
         ">
@@ -62,6 +68,18 @@
             document.querySelector('#night_day2').value = 'night';   
 }
 ">
+
+    <h1> Array </h1>
+    <h2>Syntax</h2>
+    <script>
+        var coworkers = ["egoing", "leezche"];
+    </script>
+      <h2> get : 배열의 요소 가져오기 </h2>
+      <script>
+        document.write("<h3> coworkers[0] : " + coworkers[0] + "</h3>");
+        document.write("<h3> coworkers[1] : " + coworkers[1] + "</h3>");
+      </script>
+
 </body>
 
 </html>
