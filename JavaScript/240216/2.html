@@ -19,8 +19,32 @@
 
         <!-- div: 의미는 없고 그냥 묶어주는 기능//같은 기능인데 span은 인라인레벨 -->
         <div id="article">
-            <input type = "button" id="change_color" value="night" 
-            onclick = "
+
+            <!-- 2/19 5교시  : 버튼으로 배경색 및 a링크 색상 변경 JS테스트-->
+            <input type = "button" id="change_color" value="night"  onclick = "changeColorTest()" >
+
+            <h2>CSS란 무엇인가?</h2>
+            <p style="margin-top: 40px;">
+                Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+                of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
+                of the World Wide Web, alongside HTML and JavaScript.[2]
+                CSS is designed to enable the separation of presentation and content, including layout,
+                colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility
+                and control in the specification of presentation characteristics; enable multiple web pages to
+                share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
+                and repetition in the structural content
+            </p>
+        </div>
+    </div>
+
+    <!-- 2/19 5교시 계속 -->
+    <script>
+        // 함수(=메서드) 이름 작명시 첫단어를 제외하고는 대문자로 쓰자.
+        
+        function changeColorTest(){
+            
+        // 실행시 night 버튼값 변경이 안되는 현상이 있다. this 수정필요
+                    
             var target = document.querySelector('body');
 
         if (this.value === 'night') {
@@ -51,33 +75,10 @@
                     i = i + 1;
                 }
         }
-            ">
 
-            <h2>CSS란 무엇인가?</h2>
-            <p style="margin-top: 40px;">
-                Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
-                of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
-                of the World Wide Web, alongside HTML and JavaScript.[2]
-                CSS is designed to enable the separation of presentation and content, including layout,
-                colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility
-                and control in the specification of presentation characteristics; enable multiple web pages to
-                share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
-                and repetition in the structural content
-            </p>
-        </div>
-    </div>
-
-    <!-- 2/19 5교시 -->
-
-    <script>
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while (i < alist.length) {
-            alist[i].style.color = 'powderblue';
-            console.log(alist[i]);
-            i = i + 1;
         }
     </script>
+   
 </body>
 
 </html>
