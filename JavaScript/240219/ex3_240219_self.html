@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문으로 메뉴 출력 </title>
+</head>
+
+<body>
+
+
+    <h2>점심메뉴(배열), 먹고 싶은 메뉴 정해서 반복문 출력</h2>
+    <ul>
+        <script>
+            var lunchMenu = ["국밥", "쌀국수", "라면", "햄버거", "떡볶이"]
+            var i = 0;
+            while (i < lunchMenu.length) {
+                document.write('<li>' + lunchMenu[i] + '</li>');
+                i = i + 1;
+            }
+        </script>
+    </ul>
+
+
+    <!-- 연습해보기 : 짝수 출력 하기 
+    while문 사용/if문 사용해서 출력해보기 / 사칙연산에서 % = 나머지 의미 -->
+
+    <h3> 짝수 출력해보기 </h3>
+    <script>
+
+        var i = 0;
+
+        while (i < 10) {
+
+            if (i != 0 && i % 2 == 0) {
+
+                document.write(i+'<br>')
+            }
+
+            i = i + 1;
+
+        }
+    </script>
+
+
+</body>
+
+</html>
