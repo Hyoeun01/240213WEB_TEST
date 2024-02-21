@@ -80,7 +80,7 @@
                 Body.setColor('white')
                 self.value = 'day'
 
-                linksSetColor('yellow')
+                Links.setColor('yellow')
                 // //a태그를 다중선택자 이용, alist 변수에 담아서 각 a태그속성(색상)에 접근하여 변경작업 (반복문 이용)
                 // var alist = document.querySelectorAll('a');
                 // var i = 0;
@@ -101,7 +101,7 @@
                 Body.setColor('black')
                 self.value = 'night'
 
-                linksSetColor('blue')
+                Links.setColor('blue')
                 // var alist = document.querySelectorAll('a');
                 // var i = 0;
                 // while (i < alist.length) {
@@ -113,30 +113,46 @@
 
         }
         // 해당 a태그 요소 모두 선택, 색상 변경하는 기능을 함수로 분리
-        function linksSetColor(color) {
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while (i < alist.length) {
-                alist[i].style.color = color;
-                console.log(alist[i]);
-                i = i + 1;
+        // function linksSetColor(color) {
+        //     var alist = document.querySelectorAll('a');
+        //     var i = 0;
+        //     while (i < alist.length) {
+        //         alist[i].style.color = color;
+        //         console.log(alist[i]);
+        //         i = i + 1;
+        //     }
+        // }
+
+        //기존 a태그 선택해서 색변경기능을 객체함수에 담기
+        // 키 : setColor 
+        // 값 : funcion ~
+            var Links = {
+            setColor: function (color) {
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = color;
+                    i = i + 1;
+                }
             }
         }
 
         //주의사항 ; 함수를 사용시 인잣값으로 문자열타입 사용하기
 
-        // body태그 하위 글자색을 변경하는 함수
-        function BodySetColor(color) {
-            document.querySelector('body').style.color = color;
-        }
+        // // body태그 하위 글자색을 변경하는 함수
+        // function BodySetColor(color) {
+        //     document.querySelector('body').style.color = color;
+        // }
 
-        // body태그 하위 배경색을 변경하는 함수
-        function BodySetBackgroudSetColor(color) {
-            document.querySelector('body').style.backgroundColor = color;
-        }
+        // // body태그 하위 배경색을 변경하는 함수
+        // function BodySetBackgroudSetColor(color) {
+        //     document.querySelector('body').style.backgroundColor = color;
+        // }
 
         // Body (객체) : 해당 객체 내 속성으로 익명함수 이용중
         var Body = {
+            //키 : setColor
+            //값 : function~
             setColor: function (color) {
                 document.querySelector('body').style.color = color;
             },
