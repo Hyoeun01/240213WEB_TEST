@@ -4,12 +4,12 @@
 <head>
     <title>WEB1 - CSS </title>
     <meta charset="utf-8">
-    
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <h1><a href="index.html">WEB</a></h1>
+    
     <div id="grid">
         <ol>
             <li><a href="1.html">HTML</a></li>
@@ -38,51 +38,7 @@
 
     </div>
 
-    <script>
-
-        function nightDayHandler(self) {
-
-            if (self.value === 'night') {
-
-                Body.setBackgroundColor('black')
-                Body.setColor('white')
-                self.value = 'day'
-                
-                Links.setColor('pink')
-
-            } else {
-
-                Body.setBackgroundColor('white')
-                Body.setColor('black')
-                self.value = 'night'
-
-                Links.setColor('lightcoral')
-            }
-
-        }
-
-        var Links = {
-            setColor: function (color) {
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = color;
-                    i = i + 1;
-                }
-            }
-        }
-
-        var Body = {
-            
-            setColor: function (color) {
-                document.querySelector('body').style.color = color;
-            },
-            setBackgroundColor: function (color) {
-                document.querySelector('body').style.backgroundColor = color;
-            }
-        }
-    </script>
-
+<script src="js/colors.js"></script>
 </body>
 
 </html>
