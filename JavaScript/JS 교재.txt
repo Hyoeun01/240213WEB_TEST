@@ -1482,6 +1482,9 @@ var target = document.querySelector('body');
             target.style.color = 'white';
             this.value = 'day'
 
+            // css작업은 보통 선택자로 작업을 하고
+            // 자바스크립트로 특정 요소에 접근해서 이벤트(액션 : 색변경, 데이터 전달, 크롤링 - 특정 데이터 자동 수집)가 발생
+
             var alist = document.querySelectorAll('a');
             var i = 0;
             while ( i < alist.length) {
@@ -1513,8 +1516,14 @@ function이라는 키워드를 붙이기.
 
 지금 당장 중요하지 않지만 
 function nightDayHandler(self) 라고 바꾸기. 
+
+// 함수 사용 (함수 이름으로 접근) : nightDayHandler(this : 인잣값)
+// this : 던지는 값 = 함수가 정의된 곳의 매개변수로 던진다. 
+// this는 input 태그 의미. 현재 함수는 input 태그의 onclick 속성으로 사용중이기 때문. 부모 태그가 input
+
 함수 안에서 this -> self 로 변경. 
 
+// 함수 정의 > self : 매개변수 (받는변수)
 function nightDayHandler(self) {
 var target = document.querySelector('body');
         if (self.value === 'night') {
@@ -1575,10 +1584,21 @@ nightDayHandler()라는 함수를 실행하라는 뜻.
 일단 함수만 기억해보자. 
 기본 문법 배우고 매개변수(parameter)와 인자(argument)를 
 배우고, return 키워드 배우면 끝. 
+
+// 함수의 동작 
+// 1) 특정 기능 실행 후 종료
+>> function sum(a,b) {
+  console.log (a+b)
+}
+// 2) 특정 기능 실행 후 결괏값 내보내기
+
 function sum(a, b) { //함수가 정의된 부분에 소괄호 안에 변수 이름: 매개변수.
  return a+b
 }
 사용 할 때, 
+//결과 값 재사용
+//var result = sum (1,2) -> result 에는 3이들어있다
+
 sum(1,2); // 1,2 이부분의 인자. -> 함수를 호출한다. call 
 
 새파일 : ex9.html 만들기. 
