@@ -9,27 +9,36 @@ h1 {
     font-size: 45px;
     text-align: center;
     border-bottom: 1px solid gray;
-    margin : 0 ;
-    padding : 20px;
-   }
+    margin: 0;
+    padding: 20px;
+}
+/* 수업한 내용은 아니지만
+absolute 속성:
+가장 가까운 상위 요소기준으로 상하좌우 지정한 값만큼 떨어진 곳에 위치한다. 
+상위 요소가 없이 <body>태그 바로 다음에 해당 요소가 정의 된다면 화면의 좌측 상단을 기준으로 요소가 지정된다.
+ */
+.absolute {
+    position: absolute;
+    right: 20px;
+}
 
-   /* 문서 전체에 있는 ol태그에 적용이된다 */
+/* 문서 전체에 있는 ol태그에 적용이된다 */
 /* ol {
     border-right : 1px solid gray;
     /* 블럭이라 화면오른쪽 끝에 실선이생김 */
-    /* width : 100px ;
+/* width : 100px ;
     /* 블럭 크기를 강제로 지정 */
-    /* margin : 0 ;
+/* margin : 0 ;
     padding : 20px ;
      
 }  */
 
 body {
-    margin : 10px ;
+    margin: 10px;
 }
 
 #grid {
-    display: grid ;
+    display: grid;
     grid-template-columns: 150px 1fr;
     /* fr=fragment(x), fraction(부분)
     첫번째 열은 150px로 고정되고 나머지 열은 반응형으로 남은부분 전부를 차지한다 */
@@ -48,25 +57,27 @@ body {
     padding-left: 25px;
 }
 
-@media(max-width :800px){
+@media(max-width :800px) {
     #grid {
         display: block;
     }
+
     #grid ol {
         border-right: none;
     }
+
     h1 {
         border-bottom: none;
     }
+
     h2 {
-        color :blue;
+        color: blue;
     }
 
 }
 
 /* 색깔 코드 확인하기  */
 #testcolor {
-    color :chocolate;
-    color :cornflowerblue
-
+    color: chocolate;
+    color: cornflowerblue
 }
