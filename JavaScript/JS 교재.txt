@@ -1999,9 +1999,16 @@ this 라는 인자를 self 라는 매개변수로 받는다.
 중복된 코드 함수로 독립 시키기. 
 
 중복되는 코드 
+//document.querySelectorAll('a'); 
+//document라는 객체의 속성들 중 함수 사용  > 함수의 결괏값 내보내기 > 결과 : a태그 4개를 내보냄
+
 var alist = document.querySelectorAll('a');
+
+// alist = [a태그 1 , a태그 2 , a태그 3 , a태그 4]
 var i = 0;
 while ( i < alist.length) {
+    //alist[0]. >> 객체에서 속성에 접근  : 닷 연산자로 해당 객체의 속성에 접근중
+    // 대입 연산자를 이용해서 값 할당 (set:설정)
 		alist[i].style.color = 'powderblue';
 		console.log(alist[i]);
 		i = i + 1;

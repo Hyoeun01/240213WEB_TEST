@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WEB1 - CSS </title>
+    <meta charset="utf-8">
+    <!-- 외부 css 불러오는 코드(로컬에 있는 css파일) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1><a href="index.html">WEB</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+
+        <!-- div: 의미는 없고 그냥 묶어주는 기능//같은 기능인데 span은 인라인레벨 -->
+        <div id="article">
+
+            <!-- 2/19 5교시  : 버튼으로 배경색 및 a링크 색상 변경 JS테스트-->
+            <!-- onclick 속성의 값으로 this는 <input>태그를 가르키고 있습니다.
+            함수로 변경하면서 this가 가르키는 값이 input이 아니고 현재 함수를 가르키게 된다.-->
+
+            <!-- 해결책 : 함수에 this 전달 >> this 는 <input>을 가르킨다 -->
+
+            <!-- 함수를 사용(호출)한다는것 : 정의된 곳으로 이동한다
+                onclick = "changeColorTest(this) = 소괄호 안에 있는 것을 인잣값(argument) 이라고 한다 
+                 함수를 정의할 때 
+                function changeColorTest(self) = 소괄호 안에 있는 것을 파라미터(parameter)라고 한다 -->
+            <!-- 2/21 2교시 계속  : 함수이름 변경-->
+            <!-- 2/21 3교시 -->
+            <input type="button" id="change_color" value="night" onclick="nightDayHandler(this)">
+
+            <h2>CSS란 무엇인가?</h2>
+            <p style="margin-top: 40px;">
+                Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
+                of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
+                of the World Wide Web, alongside HTML and JavaScript.[2]
+                CSS is designed to enable the separation of presentation and content, including layout,
+                colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility
+                and control in the specification of presentation characteristics; enable multiple web pages to
+                share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
+                and repetition in the structural content
+            </p>
+        </div>
+    </div>
+
+    <!-- 2/19 5교시 계속 -->
+
+    <script>
+
+        // 함수 정의시 사용하는 function은 예약어여서 변수로 사용할수없다. 
+        // 예약어를 잘 몰라서 변수로 사용하면 동작이 잘 안되는 경우 발생
+
+        // 함수(=메서드) 이름 작명시 첫단어를 제외하고는 대문자로 쓰자.
+
+        function nightDayHandler(self) {
+
+            // 실행시 night 버튼값 변경이 안되는 현상이 있다. this 수정필요
+            // 함수 정의시 파라미터의 이름값은 아무거나 사용하면되지만, 의미상으로 사용 권장
+            // 순서
+            //  1. 함수 호출 onclick = "nightDayHandler(this)"
+            //  2. 함수 정의한 곳으로 이동
+            //  3. 함수를 정의한 곳에서 this는 self로 간다.
+            //  ex) 매개변수 self = this (self라는 변수에 this라는 객체를 할당(assignment)했다. x = 1; 처럼 x에 1 대입한것과 같다)
+
+            var target = document.querySelector('body');
+
+            if (self.value === 'night') {
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                self.value = 'day'
+
+                //a태그를 다중선택자 이용, alist 변수에 담아서 각 a태그속성(색상)에 접근하여 변경작업 (반복문 이용)
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    // 해당 a 태그의 글자 색상 변경코드
+                    alist[i].style.color = 'powderblue';
+                    // 테스트(개발 환경에서) 크롬 브라우저 콘솔 확인용
+                    console.log(alist[i]);
+                    i = i + 1;
+                }
+            } else {
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                self.value = 'night'
+
+                var alist = document.querySelectorAll('a');
+                var i = 0;
+                while (i < alist.length) {
+                    alist[i].style.color = 'blue';
+                    console.log(alist[i]);
+                    i = i + 1;
+                }
+            }
+
+        }
+            // 해당 a태그 요소 모두 선택, 색상 변경하는 기능을 함수로 분리
+        function setColor(color) {
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while (i < alist.length) {
+                alist[i].style.color = color;
+                console.log(alist[i]);
+                i = i + 1;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
