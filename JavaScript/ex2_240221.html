@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3> Hi</h3>
+
+    <script>
+
+    // 객체 형식으로 get, set 연습해보기
+    var coworkers = {
+        "programmer" : "egoing",
+       "designer" : "leezche"
+        }
+
+    // 객체의 키로 해당 값 가져오기 연습 -->
+    document.write("coworker의 키 programmer의 값 가져오기 : " + coworkers.programmer)
+    document.write("<br>")
+
+    // 추가로 값 넣기
+    coworkers.test = "she"
+    document.write("coworker의 키 test의 값 가져오기 : " + coworkers.test+"<br>")
+    
+    // 공백이 포함된 변수의 값 넣기
+    coworkers["test 2"] = "test data";
+    document.write("coworker의 키 test 2의 값 가져오기 : " + coworkers["test 2"]+"<br>")
+
+    </script>
+
+</body>
+</html>
