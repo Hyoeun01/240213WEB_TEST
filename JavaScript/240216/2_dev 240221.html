@@ -73,9 +73,11 @@
                 //이부분을 함수로 변경해서 재사용 해보기
                 // 기존에는 중복부분을 target이란 변수에 할당해서 사용. 리팩토링 했지만 이번에는  함수를 이용할 예정
                 // target.style.backgroundColor = 'black';
-                BodySetBackgroudSetColor ('black')
-                // target.style.color = 'white';
-                BodySetColor ('white')
+                // BodySetBackgroudSetColor('black')
+                // // target.style.color = 'white';
+                // BodySetColor('white')
+                Body.setBackgroundColor('black')
+                Body.setColor('white')
                 self.value = 'day'
 
                 linksSetColor('yellow')
@@ -91,12 +93,14 @@
                 // }
 
             } else {
-                BodySetBackgroudSetColor ('white')
-                BodySetColor ('black')
+                // BodySetBackgroudSetColor('white')
+                // BodySetColor('black')
                 // target.style.backgroundColor = 'white';
                 // target.style.color = 'black';
+                Body.setBackgroundColor('white')
+                Body.setColor('black')
                 self.value = 'night'
-                
+
                 linksSetColor('blue')
                 // var alist = document.querySelectorAll('a');
                 // var i = 0;
@@ -125,11 +129,22 @@
         function BodySetColor(color) {
             document.querySelector('body').style.color = color;
         }
-        
+
         // body태그 하위 배경색을 변경하는 함수
         function BodySetBackgroudSetColor(color) {
             document.querySelector('body').style.backgroundColor = color;
         }
+
+        // Body (객체) : 해당 객체 내 속성으로 익명함수 이용중
+        var Body = {
+            setColor: function (color) {
+                document.querySelector('body').style.color = color;
+            },
+            setBackgroundColor: function (color) {
+                document.querySelector('body').style.backgroundColor = color;
+            }
+        }
+
     </script>
 
 </body>

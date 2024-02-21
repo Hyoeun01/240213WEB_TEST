@@ -2262,12 +2262,17 @@ document.write("data scientist : " + coworkers["data scientist"] + "<br>");
 그런데 생성된 객체에 있는 데이터를 모조리 다 가져와야 하는 경우가 있음. 
 그런 경우 반복문을 써서 배열에서 데이터를 가져온 것처럼 
 객체에서도 가져오는 방법을 알아봄. 
-검새: javascript object iterate 
+검색: javascript object iterate 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...in
 
 for .. in 을 쓰라고 나옴. 
 이 내용을 토대로 coworkers 의 모든 객체를 꺼내서 화면에 출력하는 코드. 
 
+기본 for문
+for (초깃값;조건식;증감연산자)
+ex) for (var i= 1; i<10 ; i++){}
+
+//coworkers의 값을 하나씩 key에 담는다
 <h2>Iterate</h2>
 <script>
 	for(var key in coworkers) {
@@ -2344,7 +2349,9 @@ ex10.html
 
 <h2>Property & Method</h2>
 <script>
-coworkers.showAll = function() {
+//function뒤에 함수명이 없는것을 익명함수라고 하고, 보통 일회용이나 간단히 사용하기 위함
+//익명함수에서 화살표함수 사용가능 (함수의 모양을 간단히 하기 위함 : 람다식)
+coworkers.showAll = function() { // 익명함수 이므로 바로 특정변수에 할당을 한다
 
 }
 </script>
@@ -2356,6 +2363,7 @@ showAll() 함수에 있는 코드를 showAll 메서드에 붙여넣기.
 
 <h2>Property & Method</h2>
 <script>
+//객체에 함수를 설정(set)
 coworkers.showAll = function() {
  for(var key in coworkers) {
 	document.write(key + ' : ' + coworkers[key] + '<br>');
@@ -2364,6 +2372,7 @@ coworkers.showAll = function() {
 </script>
 
 showAll() 메서드 호출 
+//객체에 있는 함수 이용(호출)
 coworkers.showAll();
 
 <h2>Property & Method</h2>

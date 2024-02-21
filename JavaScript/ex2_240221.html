@@ -1,35 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <h3> Hi</h3>
 
     <script>
 
-    // 객체 형식으로 get, set 연습해보기
-    var coworkers = {
-        "programmer" : "egoing",
-       "designer" : "leezche"
+        // 객체 형식으로 get, set 연습해보기
+        var coworkers = {
+            "programmer": "egoing",
+            "designer": "leezche"
         }
 
-    // 객체의 키로 해당 값 가져오기 연습 -->
-    document.write("coworker의 키 programmer의 값 가져오기 : " + coworkers.programmer)
-    document.write("<br>")
+        // 객체의 키로 해당 값 가져오기 연습 -->
+        document.write("coworker의 키 programmer의 값 가져오기 : " + coworkers.programmer)
+        document.write("<br>")
 
-    // 추가로 값 넣기
-    coworkers.test = "she"
-    document.write("coworker의 키 test의 값 가져오기 : " + coworkers.test+"<br>")
-    
-    // 공백이 포함된 변수의 값 넣기
-    coworkers["test 2"] = "test data";
-    document.write("coworker의 키 test 2의 값 가져오기 : " + coworkers["test 2"]+"<br>")
+        // 추가로 값 넣기
+        coworkers.test = "she"
+        document.write("coworker의 키 test의 값 가져오기 : " + coworkers.test + "<br>")
 
+        // 공백이 포함된 변수의 값 넣기
+        coworkers["test 2"] = "test data";
+        document.write("coworker의 키 test 2의 값 가져오기 : " + coworkers["test 2"] + "<br><br>")
+
+        //객체와 반복문을 이용해보기 : 향상된 for문 (in키워드를 이용하여 해당 복수개에서 하나씩 꺼내서 사용해보기)
+        //기본 문법구조 : for (변수 in 복수개(객체, 배열 등))
+        //동작방식 : 복수개에서 하나씩 꺼내서 변수에 담기
+
+        //coworkers 객체의 모든 key 조회
+        for (var key in coworkers) {
+            document.write('for문으로 해당key의 속성 가져오기 : ' + key + '<br>');
+        }
+        document.write("<br>")
+
+        //객체의 키로 해당 value값 조회
+        for (var key in coworkers) {
+            document.write('coworkers의 객체의 모든 value 조회 : ' + coworkers[key] + '<br>');
+        }
+        document.write("<br>")
+
+        // key와 value 모두 출력
+        for (var key in coworkers) {
+            document.write(key + ' : ' + coworkers[key] + '<br>');
+        }
+        document.write("<br>")
+
+        //객체에 함수를 설정(set)
+        coworkers.showAll = function () { // 익명함수 이므로 바로 특정변수에 할당을 한다
+            // 화살표 함수로 확장시에도 사용을 한다
+            // 화살표함수의 문법 : (매개변수) => {실행될 내용}
+            // for (var key in coworkers) { // coworkers는 this로 대체가능. 현재 함수의 부모요소가 coworkers이기 때문
+            //     document.write(key + ' : ' + coworkers[key] + '<br>');
+            // }
+
+            for (var key in this) { 
+                document.write(key + ' : ' + this[key] + '<br>');
+            }
+        }
+        //출력시 key에 showAll의 정체는 함수.
+        //그래서 반복문으로 출력시 showAll이 같이 출력되어서 주석부분도 같이 출력되었다.
+
+        //객체에 있는 함수 이용(호출)
+        coworkers.showAll();
     </script>
 
+
 </body>
+
 </html>
