@@ -16,14 +16,13 @@
             <li><a href="2.html">CSS</a></li>
             <li><a href="3.html">JavaScript</a></li>
         </ol>
-
        
         <div id="article">
-
            
             <input type="button" id="change_color" value="night" onclick="nightDayHandler(this)">
 
             <h2>CSS란 무엇인가?</h2>
+
             <p style="margin-top: 40px;">
                 Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation
                 of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology
@@ -34,34 +33,35 @@
                 share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity
                 and repetition in the structural content
             </p>
-        </div>
-    </div>
 
-   
+        </div>
+
+    </div>
 
     <script>
 
         function nightDayHandler(self) {
 
-            var target = document.querySelector('body');
-
             if (self.value === 'night') {
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
+
+                BodySetBackgroudSetColor ('black')
+                BodySetColor ('white')
                 self.value = 'day'
                 
-                setColor(red)
+                linksSetColor('yellow')
 
             } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
+
+                BodySetBackgroudSetColor ('white')
+                BodySetColor ('black')
                 self.value = 'night'
 
-                setColor(blue)
+                linksSetColor('blue')
             }
 
         }
-        function setColor(color) {
+
+        function linksSetColor(color) {
             var alist = document.querySelectorAll('a');
             var i = 0;
             while (i < alist.length) {
@@ -69,6 +69,14 @@
                 console.log(alist[i]);
                 i = i + 1;
             }
+        }
+
+        function BodySetColor(color) {
+            document.querySelector('body').style.color = color;
+        }
+        
+        function BodySetBackgroudSetColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
         }
     </script>
 

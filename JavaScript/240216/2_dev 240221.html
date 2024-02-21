@@ -67,40 +67,49 @@
             //  3. 함수를 정의한 곳에서 this는 self로 간다.
             //  ex) 매개변수 self = this (self라는 변수에 this라는 객체를 할당(assignment)했다. x = 1; 처럼 x에 1 대입한것과 같다)
 
-            var target = document.querySelector('body');
+            // var target = document.querySelector('body');
 
             if (self.value === 'night') {
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
+                //이부분을 함수로 변경해서 재사용 해보기
+                // 기존에는 중복부분을 target이란 변수에 할당해서 사용. 리팩토링 했지만 이번에는  함수를 이용할 예정
+                // target.style.backgroundColor = 'black';
+                BodySetBackgroudSetColor ('black')
+                // target.style.color = 'white';
+                BodySetColor ('white')
                 self.value = 'day'
 
-                //a태그를 다중선택자 이용, alist 변수에 담아서 각 a태그속성(색상)에 접근하여 변경작업 (반복문 이용)
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    // 해당 a 태그의 글자 색상 변경코드
-                    alist[i].style.color = 'powderblue';
-                    // 테스트(개발 환경에서) 크롬 브라우저 콘솔 확인용
-                    console.log(alist[i]);
-                    i = i + 1;
-                }
-            } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-                self.value = 'night'
+                linksSetColor('yellow')
+                // //a태그를 다중선택자 이용, alist 변수에 담아서 각 a태그속성(색상)에 접근하여 변경작업 (반복문 이용)
+                // var alist = document.querySelectorAll('a');
+                // var i = 0;
+                // while (i < alist.length) {
+                //     // 해당 a 태그의 글자 색상 변경코드
+                //     alist[i].style.color = 'powderblue';
+                //     // 테스트(개발 환경에서) 크롬 브라우저 콘솔 확인용
+                //     console.log(alist[i]);
+                //     i = i + 1;
+                // }
 
-                var alist = document.querySelectorAll('a');
-                var i = 0;
-                while (i < alist.length) {
-                    alist[i].style.color = 'blue';
-                    console.log(alist[i]);
-                    i = i + 1;
-                }
+            } else {
+                BodySetBackgroudSetColor ('white')
+                BodySetColor ('black')
+                // target.style.backgroundColor = 'white';
+                // target.style.color = 'black';
+                self.value = 'night'
+                
+                linksSetColor('blue')
+                // var alist = document.querySelectorAll('a');
+                // var i = 0;
+                // while (i < alist.length) {
+                //     alist[i].style.color = 'blue';
+                //     console.log(alist[i]);
+                //     i = i + 1;
+                // }
             }
 
         }
-            // 해당 a태그 요소 모두 선택, 색상 변경하는 기능을 함수로 분리
-        function setColor(color) {
+        // 해당 a태그 요소 모두 선택, 색상 변경하는 기능을 함수로 분리
+        function linksSetColor(color) {
             var alist = document.querySelectorAll('a');
             var i = 0;
             while (i < alist.length) {
@@ -108,6 +117,18 @@
                 console.log(alist[i]);
                 i = i + 1;
             }
+        }
+
+        //주의사항 ; 함수를 사용시 인잣값으로 문자열타입 사용하기
+
+        // body태그 하위 글자색을 변경하는 함수
+        function BodySetColor(color) {
+            document.querySelector('body').style.color = color;
+        }
+        
+        // body태그 하위 배경색을 변경하는 함수
+        function BodySetBackgroudSetColor(color) {
+            document.querySelector('body').style.backgroundColor = color;
         }
     </script>
 

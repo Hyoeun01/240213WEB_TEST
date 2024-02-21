@@ -2210,6 +2210,7 @@ coworkers 라는 변수에 객체를 담을 예정.
 "programmer" : "egoing"
 "designer" : "leezche"
 
+//객체안의 내용 형태 { key : value } 
 <script>
  var coworkers = {
  "programmer" : "egoing",
