@@ -1658,10 +1658,11 @@ function sum (num1, num2) {
  num1 = 2;
  num2 = 2;
  
- sum (num1, num2);
- sum (1, 2);
+ var result1 = sum (num1, num2);
+ var result2 = sum (1, 2);
  sum ();
 
+// 함수는 사용하면 소멸한다. 함수 내부의 사용한 변수도 모두 소멸한다.
 <script>
 function two() {
 document.write('<li>2-1</li>');
@@ -1801,8 +1802,10 @@ sumColorRed()
 function sum(left, right) {
  document.write(left+right+'<br>');
  }
+
+ // 주의사항 : 문자열 표기시 작은 따옴표 안에 넣어야함. 문자열 내부에 문자열은 밖과 안을 다르게 쓴다.
 function sumColorRed(left, right) {
-document.write('<div style="color: red;">' + left+right+'</div><br>');
+document.write('<div style="color: red;">' + left + right + '</div><br>');
 }
  
  sum(2,3);
