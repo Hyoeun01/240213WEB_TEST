@@ -30,7 +30,8 @@
                 onclick = "changeColorTest(this) = 소괄호 안에 있는 것을 인잣값(argument) 이라고 한다 
                  함수를 정의할 때 
                 function changeColorTest(self) = 소괄호 안에 있는 것을 파라미터(parameter)라고 한다 -->
-            <input type = "button" id="change_color" value="night"  onclick = "changeColorTest(this)" >
+            <!-- 2/21 2교시 계속  : 함수이름 변경-->
+            <input type = "button" id="change_color" value="night"  onclick = "nightDayHandler(this)" >
 
             <h2>CSS란 무엇인가?</h2>
             <p style="margin-top: 40px;">
@@ -47,6 +48,7 @@
     </div>
 
     <!-- 2/19 5교시 계속 -->
+    
     <script>
 
         // 함수 정의시 사용하는 function은 예약어여서 변수로 사용할수없다. 
@@ -54,12 +56,12 @@
 
         // 함수(=메서드) 이름 작명시 첫단어를 제외하고는 대문자로 쓰자.
         
-        function changeColorTest(self){
+        function nightDayHandler(self){
             
         // 실행시 night 버튼값 변경이 안되는 현상이 있다. this 수정필요
         // 함수 정의시 파라미터의 이름값은 아무거나 사용하면되지만, 의미상으로 사용 권장
         // 순서
-        //  1. 함수 호출 onclick = "changeColorTest(this)"
+        //  1. 함수 호출 onclick = "nightDayHandler(this)"
         //  2. 함수 정의한 곳으로 이동
         //  3. 함수를 정의한 곳에서 this는 self로 간다.
         //  ex) 매개변수 self = this (self라는 변수에 this라는 객체를 할당(assignment)했다. x = 1; 처럼 x에 1 대입한것과 같다)
