@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_calender.css">
+    
+</head>
+
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <h1>All Schedule</h1>
+        <!-- 버튼 컨테이너 -->
+        <div class="button-container">
+            <!-- 회원가입 버튼 -->
+            <button onclick="location.href='register.html'">회원가입</button>
+            <!-- 로그인 버튼 -->
+            <button onclick="location.href='login.html'">로그인</button>
+        </div>
+    </header>
+    <main>
+        <div id="menu">
+
+            <p> calendar </p>
+            <p> memo</p>
+            <p> to-do</p>
+            <p> DIARY</p>
+            <p> 가계부</p>
+
+
+            <div id="mainCalendar">
+
+                <h2>일정을 관리해보세요</h2>
+                
+                <div id="calendar"></div>
+
+                <script src = "js/main_calender.js"></script>
+
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
