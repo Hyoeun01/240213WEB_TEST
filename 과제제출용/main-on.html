@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>All Schedule_ON</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main_calender.css">
     
+
+</head>
+
+<body>
+    <header>
+        <h1>All Schedule</h1>
+
+        <span class="nickname"> </span><span class="welcome"> 님 , 반갑습니다. </span>
+
+        <div class="circle" id="profile_picture"> <!-- 원 모양의 도형 -->
+            <script src = "js/main-on.js" ></script>
+           
+        </div>
+
+        <!-- 버튼 컨테이너 -->
+        <div class="button-container">
+
+            <!-- 로그인 버튼 -->
+            <button onclick="location.href='login.html'">정보변경</button>
+            <!-- 로그아웃 버튼 -->
+            <button onclick="location.href='main-off.html'">로그아웃</button>
+        </div>
+
+    </header>
+    <main>
+        <div id="menu">
+            <ul>
+                <br>
+                <li> calendar </li> <br>
+                <li> memo </li><br>
+                <li> to-do </li><br>
+                <li> DIARY </li><br>
+                <li> 가계부 </li><br>
+                <li> 추가하기 </li><br>
+                <li> 추가하기 </li><br>
+                <li> 추가하기 </li><br>
+                <br>
+
+            </ul>
+
+            <div id="mainCalendar">
+                
+                <div class = button_add>
+                <br>
+                
+                <button id="add_btn">일정 추가</button> <span>&nbsp;&nbsp;</span>
+                <button id="add_btn">기념일 추가</button> <span>&nbsp;&nbsp;</span>
+                <button id="add_btn">D-Day 추가</button>
+                <br>
+            </div>
+
+                <div id="calendar"></div>
+                <script src="js/main_calender.js"></script>
+
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div id="bottom">
+
+            <span>All Schedule</span>
+
+            <div id="bind">
+
+                <ul>
+                    <li>이름 : 신효은</li>
+                    <li>생년월일 : 921103</li>
+                </ul>
+
+            </div>
+        </div>
+    </footer>
+    <script src ="js/main.js"></script>
 </body>
+
 </html>

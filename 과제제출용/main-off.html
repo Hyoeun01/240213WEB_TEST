@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>All Schedule_OFF</title>
     
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/main_calender.css">
@@ -15,36 +14,68 @@
     <!-- 헤더 영역 -->
     <header>
         <h1>All Schedule</h1>
+
+        <span class="needlogin"> 로그인이 필요합니다. </span>
+
+        <div class="circle" id="profile_picture"> <!-- 원 모양의 도형 -->
+        <div id="message">사진을 등록하세요</div>
+        
+    </div>
         <!-- 버튼 컨테이너 -->
         <div class="button-container">
-            <!-- 회원가입 버튼 -->
-            <button onclick="location.href='register.html'">회원가입</button>
             <!-- 로그인 버튼 -->
             <button onclick="location.href='login.html'">로그인</button>
+            <!-- 회원가입 버튼 -->
+            <button onclick="location.href='register.html'">회원가입</button>
         </div>
+        <script src ="js/main.js"></script>
+        <script>
+        document.getElementById('profile_picture').addEventListener('click', function() {
+            window.location.href = 'register.html'; // 클릭 시 페이지 이동
+        });
+    </script>
     </header>
     <main>
         <div id="menu">
+            <ul>
+                <br>
+            <li> calendar </li> <br>
+            <li> memo </li><br>
+            <li> to-do </li><br>
+            <li> DIARY </li><br>
+            <li> 가계부 </li><br>
+            <li> 추가하기 </li><br>
+            <li> 추가하기 </li><br>
+            <li> 추가하기 </li><br>
 
-            <p> calendar </p>
-            <p> memo</p>
-            <p> to-do</p>
-            <p> DIARY</p>
-            <p> 가계부</p>
-
-
+        </ul>
+        
             <div id="mainCalendar">
+                <h1> &nbsp;&nbsp;&nbsp;&nbsp; 당신의 모든 일정을 관리하세요! </h1>
 
-                <h2>일정을 관리해보세요</h2>
-                
                 <div id="calendar"></div>
-
                 <script src = "js/main_calender.js"></script>
-
+                
             </div>
 
         </div>
     </main>
+
+    <footer>
+        <div id="bottom">
+
+        <span>All Schedule</span>
+
+            <div id ="bind">
+                
+            <ul>
+                <li>이름 : 신효은</li>
+                <li>생년월일 : 921103</li>
+            </ul>
+
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
