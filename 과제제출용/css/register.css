@@ -30,10 +30,17 @@ body {
   .form-group button {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color: #2440b1;
+    color: white;
   }
+
+  .form-group button:hover {
+    background-color: #2632a3;
+}
+
 
   .hidden {
     display: none;
