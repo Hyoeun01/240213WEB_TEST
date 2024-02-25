@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px ;
+}
+th, td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+}
+.today {
+    background-color: #4caf50;
+    color: white;
+}
+.selected {
+    background-color: #2196F3;
+    color: white;
+}

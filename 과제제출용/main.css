@@ -1,0 +1,181 @@
+
+body {
+    margin: 0;
+}
+
+/* 헤더 스타일 */
+ header {
+    background-color: rgb(241, 196, 15);
+    /* 헤더 배경색 */
+    padding: 20px 0 20px 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    position: relative;
+    justify-content: space-between;
+}
+
+/* 사이트 이름 스타일 */
+header h1 {
+    margin: 0;
+    font-size: 40px;
+    flex-grow: 1;
+    position: absolute; /* 헤더 내부의 절대 위치를 설정 */
+        top: 50%; /* 헤더의 상단으로부터 50% 위치에 배치 */
+        left: 50%; /* 헤더의 좌측으로부터 50% 위치에 배치 */
+        transform: translate(-50%, -50%); /* 헤더 요소의 중앙 정렬을 위한 변환 */
+}
+
+.needlogin {
+    margin-left: auto;
+    font-size : 12px ;
+}
+
+.nickname {
+    margin-left: auto;
+}
+.welcome {
+    margin-left: auto; /* 오른쪽으로 이동 */
+    font-size: 12px;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* 원 모양을 만들기 위해 50%의 반지름 설정 */
+    background-color: #ccc; /* 배경색 설정 */
+    margin : 0 30px 0 30px;
+    position: relative;
+    text-align: center;
+}
+
+
+#message {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px ;/* 테두리 둥글게 */
+    font-size: 13px; /* 글자 크기 조정 */
+    width: 110px; /* 너비 조정 */
+    top: calc(100% + 5px); /* 부모 요소의 하단에서부터의 거리 조정 */
+    left: 50%; /* 부모 요소의 가운데로 정렬 */
+    transform: translateX(-50%); /* 가로 방향 가운데 정렬 */
+}
+
+
+/* 버튼 컨테이너 스타일 */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* 버튼 스타일 */
+.button-container button {
+    padding: 10px 25px;
+    margin: 10px;
+    /* 버튼 간격 조정 */
+    background-color: #2440b1;
+    /* 버튼 배경색 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 110px;
+}
+
+/* 버튼 호버 효과 */
+.button-container button:hover {
+    background-color: #2632a3;
+}
+
+
+ul {
+
+    list-style-type: none;
+}
+
+#menu {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+   
+    margin: 0 0 0 20px;
+}
+
+#menu ul {
+    border-right: 2px solid black;
+    width: 200px;
+    padding: 0;
+    margin : 0 ;
+    
+}
+
+main h1  {
+    
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
+main .button_add {
+        padding : 0 0 18px 10px ;
+        display: inline-block ; 
+        width: 80%; 
+        margin : 20px 30px 30px 30px;
+    
+    }
+    
+    main .button_add button{
+    background-color: rgb(241, 196, 15); 
+    color:black;
+    border-radius: 5px ;
+    border : rgb(217, 125, 13) 1px solid;
+    cursor : pointer ;
+    }
+
+    #add_btn:hover {
+        background-color: rgb(217, 125, 13);
+    }
+
+
+
+footer {
+    position: fixed; /* 고정 위치로 설정 */
+    bottom: 0; /* 화면 하단에 배치 */
+    width: 100%; /* 가로 전체 너비 */
+    height: 100px; /* 높이 100px */
+    background-color: #ccc; /* 배경색 */
+    color: #fff; /* 텍스트 색상 */
+    text-align: center; /* 가운데 정렬 */
+    padding-top: 15px; /* 내부 여백 위쪽 */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+
+#bottom {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#bottom span {
+    margin: 0 0 0 30px; 
+    text-align: center;
+    align-items: center;
+    padding : 20px 0 0 50px;
+
+}
+
+#bind {
+    display: flex; /* 플렉스 박스를 이용하여 요소들을 가로로 정렬 */
+    align-items: center; /* 요소들을 수직 가운데로 정렬 */
+    
+}
+#bind ul {
+    padding :0;
+}

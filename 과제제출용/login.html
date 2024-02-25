@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인하기</title>
     
-   <link rel="stylesheet" href="css/resister.css">
+   <link rel="stylesheet" href="./register.css">
 </head>
 <body>
     
@@ -31,18 +31,7 @@
         </div>
           
     </form>
-        <script src = "js/resister.js"></script>
-        <script>
-          document.getElementById("password").addEventListener("input", function() {
-            var password = document.getElementById("password").value;
-            var loginButton = document.getElementById("loginButton");
-            if (password) {
-                loginButton.classList.add("blue-button");
-            } else {
-                loginButton.classList.remove("blue-button");
-            }
-        });
-        </script>
-
+        <script src = "./register.js"></script>
+       
 </body>
 </html>
